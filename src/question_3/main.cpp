@@ -18,8 +18,8 @@ int main()
         cin >> velocity;
 
         kinetic_energy = get_kinetic_energy(mass, velocity);
-        cout << "The Kinetic Energy is " << kinetic_energy;
-        cout << "Do you want to continue? (Y/N)";
+        cout << "The Kinetic Energy is " << kinetic_energy<<endl;
+        cout << "Do you want to continue? (Y/N)"<<endl;
         cin >> again;
     }while (again != 'N');
 
