@@ -5,6 +5,7 @@ bool test_config()
     return true;
 }
 
+
 double get_sales_commission(double sales){
     if(sales > 0 && sales <= 499 )
     {

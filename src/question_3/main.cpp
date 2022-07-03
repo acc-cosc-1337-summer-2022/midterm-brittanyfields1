@@ -11,12 +11,28 @@ int main()
     double velocity;
     double kinetic_energy;
     char again;
+   
     do{
         cout << "Enter Object's Mass in Kilograms: ";
         cin >> mass;
+        while (mass<0) 
+		{
+			cout << "\nInvalid option. Please Try Again.\n"; 
+			cout << "\nNumber needs to be greater than 0 "<<endl;
+            cout << "Enter Object's Mass in Kilograms: ";
+            cin >> mass;
+		} 
+        
         cout << "Enter Object's velocity in meters per second: ";
-        cin >> velocity;
-
+        cin >> velocity; 
+        while (velocity<0) 
+		{
+			cout << "\nInvalid option. Please Try Again.\n"; 
+			cout << "\nNumber needs to be greater than 0 "<<endl;
+            cout << "Enter Object's velocity in meters per second: ";
+            cin >> velocity;
+		} 
+        
         kinetic_energy = get_kinetic_energy(mass, velocity);
         cout << "The Kinetic Energy is " << kinetic_energy<<endl;
         cout << "Do you want to continue? (Y/N)"<<endl;

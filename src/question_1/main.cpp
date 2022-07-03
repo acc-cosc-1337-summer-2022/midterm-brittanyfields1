@@ -9,16 +9,26 @@ int main()
 {
     double sales;
     char again;
-    do{
-    cout << "Enter Sales Amount: ";
-    cin >> sales;
     double sales_payment;
+    do{
+      cout << "Enter Sales Amount: ";
+      cin >> sales;
+    
+      while (sales<0 ) 
+		  {
+			  cout << "\nInvalid option. Please Try Again.\n"; 
+			  cout << "\nNumber needs to be greater than 0 "<<endl;
+        cout <<"Enter Sales Amount:"<<endl;
+        cin  >> sales;
+		} 
 
     sales_payment = get_sales_commission(sales) ;
     cout << "Sales Payment is " << sales_payment <<endl;
     cout << "Do you want to continue? (Y/N) " <<endl;
-        cin >> again;
+    cin >> again;
     }while (again != 'N');
 
-    return 0;
+    
+
 }
+
