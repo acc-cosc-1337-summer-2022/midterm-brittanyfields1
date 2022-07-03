@@ -5,8 +5,13 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
-
-TEST_CASE("test")
+const double threshold = 0.0001;
+TEST_CASE("test get_fahrenheit")
 {
-	REQUIRE(test_config() == true);
+	//because of rounding errors we want to check numbers are close to each other
+	//fuzzy comparison
+	REQUIRE(abs(get_fahrenheit(37)- 98.6) <= threshold);
+	REQUIRE(abs(get_fahrenheit(25)- 77) <= threshold);
+	REQUIRE(abs(get_fahrenheit(0) - 32) <= threshold);
+
 }
